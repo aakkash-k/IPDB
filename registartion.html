@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-size: 100%;
+            background-repeat: no-repeat; 
+        }
+        fieldset{
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+            border-radius: 25px;
+            font-size:25px;
+            font-weight: bold;
+            
+        }
+        input{
+            text-align:center;
+            padding:10px;
+            background: none;
+            border-radius: 25px;
+            color:#66c2ff;
+            font-size:25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+		<legend>NEW POLITICIAN REGISTARTION</legend>
+		<form action="politician" method="post">
+			<label for="uname1"></label>
+			<input type="text" name="uname1" id="uname1" placeholder="POLITICIAN NAME"><br>
+			<br>
+			<label for="uname2"></label>
+			<input type="text" name="uname2" id = "uname2" placeholder="RE ENTER POLITICIAN NAME"><br>
+			<br>
+			<label for = "password1"></label>
+			<input type="password" name="password1" id = "password1" placeholder="PASSWORD"><br>
+			<br>
+			<label for ="password2"></label>
+			<input type="password" name="password2" id ="password2" placeholder="RE ENTER PASSWORD"><br>
+			<br>
+			<input type="submit">
+		</form>
+	</fieldset>
+</body>
+</html>

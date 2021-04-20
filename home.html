@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IPDB – Indian Politics DataBase</title>
+    <style>
+        .button{
+            text-align: center;
+        }
+        .button input{
+            font-size:30px;
+            border-radius: 50px;
+            padding:10px;
+            background-color:cyan;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+
+            text-align: left;
+            padding: 8px;
+          }
+          
+          tr:nth-child(even) {
+            background-color: #dddddd;
+          }
+    </style>
+</head>
+<body>
+    <div class ="button">
+        <form action="registration" method = "GET">
+            <input type="submit" name = "politician" value="politician register"><br>
+            
+        </form>
+        <form action="partyRegistration" method="GET">
+            <input type="submit" name="party" value="political party register">
+        </form>
+        <form action="viewPolitician" method="GET">
+            <input type="submit" name="party" value="view politician name">
+        </form>
+        <form action="viewParty" method="GET">
+            <input type="submit" name="party" value="view partys">
+        </form>
+    </div>
+        {%for politician in politicians%}
+        <table style="width:100%">
+            <tr>
+              <th>{{politician[0]}}</th>
+              <th><form action="process" method = "GET">
+                  <input type="text" name="rateing">
+                  <input type="submit" value="submit rating">
+                </form></th> 
+            
+            </tr>
+            {%endfor%}
+          </table>
+        
+   
+    <div id = "politician">
+
+    </div>
+  
+</body>
+</html>
